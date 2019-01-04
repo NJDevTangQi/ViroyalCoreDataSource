@@ -202,6 +202,9 @@
 
 - (void)addObject:(id)object
        entityName:(NSString *)entityName {
+    if (!object) {
+        return;
+    }
     [self addObjects:@[object]
           entityName:entityName
              syncAll:NO
